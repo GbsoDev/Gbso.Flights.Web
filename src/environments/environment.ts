@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  rooServiceUrl: "https://localhost:7206/api",
+  userServiceUrl: "/user",
+  //actions
+  getAction:"/get",
+  listAction:"/list",
+  postAction:"/post",
+  putAction:"/put",
+  deleteAction:"/delete",
 };
 
 /*
