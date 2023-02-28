@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   rooServiceUrl: "https://localhost:7206/api",
-  userServiceUrl: "/user",
   //actions
   getAction:"/get",
   listAction:"/list",

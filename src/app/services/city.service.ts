@@ -1,33 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Flight } from '../model/flight';
+import { City } from '../model/city';
 import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FlightsService extends BaseService{
+export class CityService extends BaseService{
 
-  urlService: string = 'flights';
+  urlService: string = 'cities';
 
   constructor(http: HttpClient) {
     super(http);
   }
 
-  public get(id: number): Observable<Flight> {
+  public get(id: number): Observable<City> {
     return super.getAction(id);
   }
 
-  public list(): Observable<Flight[]> {
+  public list(): Observable<City[]> {
     return super.listAction();
   }
 
-  public post(body: Flight): Observable<Flight> {
+  public post(body: City): Observable<City> {
     return super.postAction(body);
   }
 
-  public put(body: Flight): Observable<Flight> {
+  public put(body: City): Observable<City> {
     return super.putAction(body);
   }
 

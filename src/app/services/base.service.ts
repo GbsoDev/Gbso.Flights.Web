@@ -2,7 +2,9 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
-export class BaseService {
+export abstract class BaseService {
+
+  abstract urlService: string;
 
   constructor(private http: HttpClient) {
   }
@@ -33,6 +35,6 @@ export class BaseService {
   }
 
   protected buildUrl(): string {
-    return environment.rooServiceUrl + environment.userServiceUrl;
+    return environment.rooServiceUrl + '/' + this.urlService;
   }
 }
